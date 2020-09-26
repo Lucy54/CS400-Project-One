@@ -9,7 +9,13 @@ import main.java.Movie;
 public class MainBackEnd implements projectOneADT{
 
     // Pre-defined table capacity of 60 as per project proposal.
-    private HashTableMap<String, Movie> hashTable = new HashTableMap<String, Movie>(60);
+    private HashTableMap<String, Movie> hashTable;
+
+
+    public MainBackEnd() {
+        this.hashTable = new HashTableMap<String, Movie>(60);
+    }
+
 
     /*  addToTable will take in a key String which will be the movie title. It will also take in a value Movie which
         will be the movie being stored.
