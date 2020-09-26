@@ -6,7 +6,7 @@ package main.java.backend;
 import main.java.Movie;
 
 // Class for starting to implement back end functionality
-public class MainBackEnd {
+public class MainBackEnd implements projectOneADT{
 
     // Pre-defined table capacity of 60 as per project proposal.
     private HashTableMap<String, Movie> hashTable = new HashTableMap<String, Movie>(60);
