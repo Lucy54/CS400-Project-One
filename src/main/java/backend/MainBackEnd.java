@@ -9,7 +9,7 @@ import main.java.Movie;
 public class MainBackEnd {
 
     // Pre-defined table capacity of 60 as per project proposal.
-    private HashTableMap hashTable = new HashTableMap(60);
+    private HashTableMap<String, Movie> hashTable = new HashTableMap<String, Movie>(60);
 
     /*  addToTable will take in a key String which will be the movie title. It will also take in a value Movie which
         will be the movie being stored.
@@ -30,6 +30,36 @@ public class MainBackEnd {
 
         return hashTable.put(movieTitle, movie);
 
+    }
+
+    /*
+        getMovie takes in a String called movieTitle and returns a Movie after retrieving it from the hash table.
+        If the movie doesn't exist in the hash table, it return null after printing a message.
+     */
+    public Movie getMovie(String movieTitle) {
+        Movie movieToReturn = null;
+        if (hashTable.containsKey(movieTitle)) movieToReturn = hashTable.get(movieTitle);
+
+        if (movieToReturn != null) return movieToReturn;
+
+        // at this point the movie would not have been found.
+        // could throw an exception here if we decided instead.
+        System.out.println("Movie was not found in database.");
+        return null;
+    }
+
+
+    /*
+        removeMovie takes in a String called movieTitle and returns true if the movie was found and deleted.
+        Returns false after printing message if movie was unable ot be deleted.
+     */
+    public boolean removeMovie(String movieTitle) {
+        if (movieTitle != null && hashTable.containsKey(movieTitle)) {
+            hashTable.remove(movieTitle);
+            return true;
+        }
+        System.out.println("Movie wasn't found in database. Delete failed.");
+        return false;
     }
 
 
