@@ -9,7 +9,7 @@ public class Commands {
 
   public static MainBackEnd backEnd = new MainBackEnd();
   private static Scanner scan = new Scanner(System.in);
-
+  
   /**
    * Add movie
    */
