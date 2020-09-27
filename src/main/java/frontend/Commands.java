@@ -79,9 +79,14 @@ public class Commands {
    * Look up / Display movie
    */
   public static void display(String title) {
-    System.out.println("Title: " + backEnd.getMovie(title).getMovieTitle() + ", Year: " + 
-    backEnd.getMovie(title).getYear() + ", Rating: " + backEnd.getMovie(title).getRating() + 
-    ", Genre: " + backEnd.getMovie(title).getGenre());
+    try {
+      System.out.println("Title: " + backEnd.getMovie(title).getMovieTitle() + ", Year: " + 
+          backEnd.getMovie(title).getYear() + ", Rating: " + backEnd.getMovie(title).getRating() + 
+          ", Genre: " + backEnd.getMovie(title).getGenre());
+    }
+    catch(NullPointerException e) {
+      System.out.println("Please enter a valid movie title");
+    }
   }
   
   /**
