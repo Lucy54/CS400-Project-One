@@ -4,7 +4,7 @@
 // Team: <GD>
 // TA: <Dan Kiel>
 // Lecturer: <Gary Dahl>
-// Notes to Grader: <I've created a private class called Movie within this class to help store
+// Notes to Grader: <There is a private class called Movie within this class to help store
 // the key-value pairs in
 // the hashTable>
 
