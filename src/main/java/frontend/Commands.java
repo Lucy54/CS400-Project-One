@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Commands {
 
-  public static MainBackEnd backEnd = new MainBackEnd();
+  public static MainBackEnd backEnd = Loader.backEnd;
   private static Scanner scan = new Scanner(System.in);
   
   /**
@@ -111,9 +111,8 @@ public class Commands {
 //    System.out.println(backEnd.getMovie("It").getMovieTitle());
 //    secondMovie = backEnd.getMovie("It");
 //    System.out.println(secondMovie.getMovieTitle() + secondMovie.getGenre());
-    
-    
-    
+
+
     
     
     //Welcome Message

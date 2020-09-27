@@ -28,7 +28,7 @@ public class MainBackEnd implements projectOneADT{
 
         if (numberOfMovies == 60) {
 
-            System.out.println("Table has a capacity of 20 records. Table is currently full.\n" +
+            System.out.println("Table has a capacity of 60 records. Table is currently full.\n" +
                     "Please delete a record before adding another.");
 
             return false;
