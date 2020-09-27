@@ -1,47 +1,47 @@
 package main.java;
 
 public class Movie {
-    private String movieTitle;
-    private int year;
-    private int rating;
-    private String genre;
+    private Object movieTitle;
+    private Object year;
+    private Object rating;
+    private Object genre;
 
-    public Movie(String movieTitle, int year, int rating, String genre) {
+    public Movie(Object movieTitle, Object year, Object rating, Object genre) {
         this.movieTitle = movieTitle;
         this.year = year;
         this.rating = rating;
         this.genre = genre;
     }
 
-    public String getMovieTitle() {
+    public Object getMovieTitle() {
         return movieTitle;
     }
 
-    public void setMovieTitle(String movieTitle) {
+    public void setMovieTitle(Object movieTitle) {
         this.movieTitle = movieTitle;
     }
 
-    public int getYear() {
+    public Object getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Object year) {
         this.year = year;
     }
 
-    public int getRating() {
+    public Object getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Object rating) {
         this.rating = rating;
     }
 
-    public String getGenre() {
+    public Object getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(Object genre) {
         this.genre = genre;
     }
 }
