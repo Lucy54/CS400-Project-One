@@ -20,6 +20,8 @@ public class Commands {
    * Add movie
    */
   public static Movie addMovie(String title) {
+    //check table size
+    
     System.out.println("Enter year as integer: ");
     int year = 0;
     int rating = 0;
@@ -75,6 +77,10 @@ public class Commands {
     
     Movie movie = new Movie(title, year, rating, genre);
     backEnd.addToTable(title, movie);
+
+    if (!addToTable(title, movie)) {
+      return null;
+    }
     
     System.out.println("Movie added!");
     
@@ -134,19 +140,19 @@ public class Commands {
     while(!command.equalsIgnoreCase("q")) {
       //add movie
       if (command.equals("a")) {
-        title = scan.next();
+        title = scan.nextLine();
         addMovie(title);
       }
       
       //look up / display movie class info
       else if (command.equals("l")) {
-        title = scan.next();
+        title = scan.nextLine();
         display(title);
       }
       
       //delete movie
       else if (command.equals("d")) {
-        title = scan.next();
+        title = scan.nextLine();
         backEnd.removeMovie(title);
       }
       
