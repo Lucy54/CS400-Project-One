@@ -1,4 +1,10 @@
-//Lucy
+// --== CS400 File Header Information ==--
+// Name: <Shin-Tsz Lucy Kuo>
+// Email: <skuo8@wisc.edu>
+// Team: <GD>
+// TA: <Dan Kiel>
+// Lecturer: <Gary Dahl>
+// Notes to Grader: <front end>
 package main.java.frontend;
 import java.util.InputMismatchException;
 import main.java.*;
@@ -9,11 +15,13 @@ public class Commands {
 
   public static MainBackEnd backEnd = Loader.backEnd;
   private static Scanner scan = new Scanner(System.in);
-
+  
   /**
    * Add movie
    */
   public static Movie addMovie(String title) {
+    //check table size
+    
     System.out.println("Enter year as integer: ");
     int year = 0;
     int rating = 0;
@@ -69,6 +77,10 @@ public class Commands {
     
     Movie movie = new Movie(title, year, rating, genre);
     backEnd.addToTable(title, movie);
+
+    if (!backEnd.addToTable(title, movie)) {
+      return null;
+    }
     
     System.out.println("Movie added!");
     
@@ -128,19 +140,19 @@ public class Commands {
     while(!command.equalsIgnoreCase("q")) {
       //add movie
       if (command.equals("a")) {
-        title = scan.next();
+        title = scan.nextLine();
         addMovie(title);
       }
       
       //look up / display movie class info
       else if (command.equals("l")) {
-        title = scan.next();
+        title = scan.nextLine();
         display(title);
       }
       
       //delete movie
       else if (command.equals("d")) {
-        title = scan.next();
+        title = scan.nextLine();
         backEnd.removeMovie(title);
       }
       
