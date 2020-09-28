@@ -78,7 +78,7 @@ public class Commands {
     Movie movie = new Movie(title, year, rating, genre);
     backEnd.addToTable(title, movie);
 
-    if (!addToTable(title, movie)) {
+    if (!backEnd.addToTable(title, movie)) {
       return null;
     }
     
