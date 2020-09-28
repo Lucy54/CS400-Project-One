@@ -1,4 +1,10 @@
-//Lucy
+// --== CS400 File Header Information ==--
+// Name: <Shin-Tsz Lucy Kuo>
+// Email: <skuo8@wisc.edu>
+// Team: <GD>
+// TA: <Dan Kiel>
+// Lecturer: <Gary Dahl>
+// Notes to Grader: <front end>
 package main.java.frontend;
 import java.util.InputMismatchException;
 import main.java.*;
