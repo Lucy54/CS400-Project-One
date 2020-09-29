@@ -36,7 +36,7 @@ public class Loader {
     private void loadTitles() {
         File movieFile = null;
         try {
-            movieFile = new File("src/movie.txt");
+            movieFile = new File("movie.txt");
             //System.out.println(movieFile.getAbsolutePath());
         } catch (Exception e) {
             e.printStackTrace();
@@ -57,7 +57,7 @@ public class Loader {
     private void loadGenres() {
         File movieFile = null;
         try {
-            movieFile = new File("src/genre.txt");
+            movieFile = new File("genre.txt");
             //System.out.println(movieFile.getAbsolutePath());
         } catch (Exception e) {
             e.printStackTrace();
@@ -78,7 +78,7 @@ public class Loader {
     private void loadYears() {
         File movieFile = null;
         try {
-            movieFile = new File("src/year.txt");
+            movieFile = new File("year.txt");
             //System.out.println(movieFile.getAbsolutePath());
         } catch (Exception e) {
             e.printStackTrace();
@@ -99,7 +99,7 @@ public class Loader {
     private void loadRatings() {
         File movieFile = null;
         try {
-            movieFile = new File("src/ratings.txt");
+            movieFile = new File("ratings.txt");
           //  System.out.println(movieFile.getAbsolutePath());
         } catch (Exception e) {
             e.printStackTrace();
